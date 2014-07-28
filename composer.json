@@ -21,7 +21,8 @@
         "nelmio/api-doc-bundle": "@stable",
         "behat/symfony2-extension": "~2.0dev",
         "behat/web-api-extension": "1.0.x-dev",
-        "h4cc/alice-fixtures-bundle": "dev-master"
+        "h4cc/alice-fixtures-bundle": "dev-master",
+        "jms/serializer": "dev-master"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
