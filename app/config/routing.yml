@@ -1,0 +1,4 @@
+les_polypodessf2_rest_o_auth:
+    resource: "@LesPolypodessf2RestOAuthBundle/Resources/config/routing.yml"
+    prefix:   /
+
