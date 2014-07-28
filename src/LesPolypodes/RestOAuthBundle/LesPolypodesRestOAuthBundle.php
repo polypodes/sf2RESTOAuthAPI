@@ -1,9 +1,9 @@
 <?php
 
-namespace LesPolypodes\sf2RestOAuthBundle;
+namespace LesPolypodes\RestOAuthBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class LesPolypodessf2RestOAuthBundle extends Bundle
+class LesPolypodesRestOAuthBundle extends Bundle
 {
 }

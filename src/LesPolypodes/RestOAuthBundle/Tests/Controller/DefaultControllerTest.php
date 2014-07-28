@@ -1,6 +1,6 @@
 <?php
 
-namespace LesPolypodes\sf2RestOAuthBundle\Tests\Controller;
+namespace LesPolypodes\RestOAuthBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

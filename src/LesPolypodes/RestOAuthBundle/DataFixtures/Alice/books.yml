@@ -1,12 +1,7 @@
-parameters:
-#    lespolypodes.restoauth.example.class: LesPolypodes\RestOAuthBundle\Example
-
-services:
-#    lespolypodes.restoauth.example:
-#        class: %lespolypodes.restoauth.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
-#        calls:
-#            - [setService, [@service_id]]
-#        tags:
-#            - { name: twig.extension }
-#            - { name: kernel.event_listener, event: kernel.exception, method: onKernelException }
+\LesPolypodes\RestOAuthBundle\Entity\Book:
+  # 10 books
+  user{1..10}:
+    title: <sentence(3)>
+    isbn: <randomNumber(8)>
+    createdAt: <dateTimeBetween('-5 years', '-3 years')>
+    updatedAt: <dateTimeBetween('-2 years', 'now')>

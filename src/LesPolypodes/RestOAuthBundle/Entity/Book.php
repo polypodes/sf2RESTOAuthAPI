@@ -6,8 +6,7 @@
  * Time: 15:42
  */
 
-namespace LesPolypodes\sf2RestOAuthBundle\Entity;
-
+namespace LesPolypodes\RestOAuthBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -50,20 +49,11 @@ class Book
     /**
      * @var string
      *
-     * @ORM\Column(name="client_name", type="string", length=255, nullable=false)
+     * @ORM\Column(name="isbn", type="string", length=255, nullable=false)
      * @Expose
      * @Groups({"Book"})
      */
-    private $clientName;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="date", type="date", nullable=false)
-     * @Expose
-     * @Groups({"Book"})
-     */
-    private $date;
+    private $isbn;
 
     /**
      * @var \DateTime
@@ -96,4 +86,151 @@ class Book
 
     }
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Get title
+     *
+     * @return string
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * Set title
+     *
+     * @param  string $title
+     * @return Book
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    /**
+     * Get clientName
+     *
+     * @return string
+     */
+    public function getClientName()
+    {
+        return $this->clientName;
+    }
+
+    /**
+     * Set clientName
+     *
+     * @param  string $clientName
+     * @return Book
+     */
+    public function setClientName($clientName)
+    {
+        $this->clientName = $clientName;
+
+        return $this;
+    }
+
+    /**
+     * Get date
+     *
+     * @return \DateTime
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * Set date
+     *
+     * @param  \DateTime $date
+     * @return Book
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    /**
+     * Get createdAt
+     *
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * Set createdAt
+     *
+     * @param  \DateTime $createdAt
+     * @return Book
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    /**
+     * Get updatedAt
+     *
+     * @return \DateTime
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+
+    /**
+     * Set updatedAt
+     *
+     * @param  \DateTime $updatedAt
+     * @return Book
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * Set isbn
+     *
+     * @param string $isbn
+     * @return Book
+     */
+    public function setIsbn($isbn)
+    {
+        $this->isbn = $isbn;
+
+        return $this;
+    }
+
+    /**
+     * Get isbn
+     *
+     * @return string 
+     */
+    public function getIsbn()
+    {
+        return $this->isbn;
+    }
 }
