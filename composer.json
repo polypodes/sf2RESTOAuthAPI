@@ -19,10 +19,16 @@
         "sensio/framework-extra-bundle": "~3.0",
         "incenteev/composer-parameter-handler": "~2.0",
         "nelmio/api-doc-bundle": "@stable",
-        "behat/symfony2-extension": "~2.0dev",
-        "behat/web-api-extension": "1.0.x-dev",
+        "knplabs/friendly-contexts": "dev-master",
+        "behat/behat": "~3@dev",
+        "guzzlehttp/guzzle": "~4.0",
+        "behat/mink-extension": "~2@dev",
+        "behat/mink-browserkit-driver": "*",
+        "behat/mink-goutte-driver": "*",
+        "behat/mink-selenium2-driver": "*",
         "h4cc/alice-fixtures-bundle": "dev-master",
-        "jms/serializer": "dev-master"
+        "jms/serializer": "dev-master",
+        "willdurand/hateoas-bundle": "@stable"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

@@ -19,8 +19,7 @@ use JMS\Serializer\Annotation\Groups;
  *
  * @ORM\Table(name="reference__book")
  * @ORM\Entity
- *
- * @ExclusionPolicy("all")
+ * @ORM\HasLifecycleCallbacks
  *
  */
 class Book

@@ -1,0 +1,16 @@
+default:
+    autoload:
+      "": %paths.base%/features/bootstrap
+    suites:
+        default:
+            path: %paths.base%/features
+            contexts:
+                - Knp\FriendlyContexts\Context\MinkContext
+                - Knp\FriendlyContexts\Context\ApiContext
+    extensions:
+        Knp\FriendlyContexts\Extension: ~
+        Behat\MinkExtension:
+            base_url: http://restoauthapi
+            sessions:
+                 default:
+                     goutte: ~

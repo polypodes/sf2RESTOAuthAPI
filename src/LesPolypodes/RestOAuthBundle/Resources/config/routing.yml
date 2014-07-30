@@ -1,3 +1,22 @@
-les_polypodes_rest_o_auth_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: LesPolypodesRestOAuthBundle:Default:index }
+index:
+    pattern:     /
+    defaults: { _controller: LesPolypodesRestOAuthBundle:Api:index }
+
+books:
+    pattern: /books.{_format}
+    defaults:
+        _controller: 'LesPolypodesRestOAuthBundle:Api:books'
+        _format: json
+    requirements:
+        _method: GET
+        _format: html|json|xml
+
+book:
+    pattern: /books/{id}.{_format}
+    defaults:
+        _controller: 'LesPolypodesRestOAuthBundle:Api:book'
+        _format: json
+    requirements:
+        _method: GET
+        _format: html|json|xml
+        id: \d+
