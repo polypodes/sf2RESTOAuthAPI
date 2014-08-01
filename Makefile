@@ -49,4 +49,4 @@ fixtures: reset
 reset: dropDb install
 
 behat:
-	bin/behat --lang=fr  "@LesPolypodesRestOAuthBundle"
+	bin/behat --suite=api_suite

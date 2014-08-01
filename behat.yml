@@ -1,16 +1,19 @@
 default:
-    autoload:
-      "": %paths.base%/features/bootstrap
     suites:
-        default:
-            path: %paths.base%/features
+        api_suite:
+            type: symfony_bundle
+            bundle: 'LesPolypodesRestOAuthBundle'
             contexts:
-                - Knp\FriendlyContexts\Context\MinkContext
-                - Knp\FriendlyContexts\Context\ApiContext
+#               - Behat\MinkExtension\Context\MinkContext
+#                - LesPolypodes\RestOAuthBundle\Features\Context\FeatureContext:
+#                    - http://restoauthapi
     extensions:
+        Behat\Symfony2Extension:
+            mink_driver:    true
+        Behat\Symfony2Extension\ServiceContainer\Symfony2Extension: ~
         Knp\FriendlyContexts\Extension: ~
         Behat\MinkExtension:
-            base_url: http://restoauthapi
+            base_url:         http://restoauthapi
             sessions:
                  default:
                      goutte: ~

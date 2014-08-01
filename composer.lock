@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "71a2db7dbc408708a9671f79a0d0685c",
+    "hash": "e91209d8c3a2b5fadf844965d2ec370c",
     "packages": [
         {
             "name": "behat/behat",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Behat/Behat.git",
-                "reference": "353efecdf8b42b20dbb85a7bf069235b306c5585"
+                "reference": "5bff1fd620e3dee8f8463ba749210a81ddd8dbea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Behat/zipball/353efecdf8b42b20dbb85a7bf069235b306c5585",
-                "reference": "353efecdf8b42b20dbb85a7bf069235b306c5585",
+                "url": "https://api.github.com/repos/Behat/Behat/zipball/5bff1fd620e3dee8f8463ba749210a81ddd8dbea",
+                "reference": "5bff1fd620e3dee8f8463ba749210a81ddd8dbea",
                 "shasum": ""
             },
             "require": {
@@ -85,7 +85,7 @@
                 "symfony",
                 "testing"
             ],
-            "time": "2014-07-22 21:28:32"
+            "time": "2014-07-31 15:07:31"
         },
         {
             "name": "behat/gherkin",
@@ -423,6 +423,67 @@
                 "webdriver"
             ],
             "time": "2013-06-02 19:09:45"
+        },
+        {
+            "name": "behat/symfony2-extension",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Behat/Symfony2Extension.git",
+                "reference": "ad22eb652a5f866ea03ea2b53b38ce99ed61570c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Behat/Symfony2Extension/zipball/ad22eb652a5f866ea03ea2b53b38ce99ed61570c",
+                "reference": "ad22eb652a5f866ea03ea2b53b38ce99ed61570c",
+                "shasum": ""
+            },
+            "require": {
+                "behat/behat": "~3.0,>=3.0.4",
+                "php": ">=5.3.3",
+                "symfony/framework-bundle": "~2.0"
+            },
+            "require-dev": {
+                "behat/mink-browserkit-driver": "~1.0",
+                "behat/mink-extension": "~2.0@dev",
+                "phpspec/phpspec": "~2.0",
+                "phpunit/phpunit": "~4.0",
+                "symfony/symfony": "~2.1"
+            },
+            "type": "behat-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Behat\\Symfony2Extension": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christophe Coevoet",
+                    "email": "stof@notk.org"
+                },
+                {
+                    "name": "Konstantin Kudryashov",
+                    "email": "ever.zet@gmail.com",
+                    "homepage": "http://everzet.com"
+                }
+            ],
+            "description": "Symfony2 framework extension for Behat",
+            "homepage": "http://behat.org",
+            "keywords": [
+                "BDD",
+                "framework",
+                "symfony"
+            ],
+            "time": "2014-05-09 01:46:47"
         },
         {
             "name": "behat/transliterator",
@@ -1907,12 +1968,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/FriendlyContexts.git",
-                "reference": "9f28fda65c79f24225acf8e6b482762cc3b04239"
+                "reference": "4f96ecc42c700b21d0eb29a1e618b713da27a5f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/FriendlyContexts/zipball/9f28fda65c79f24225acf8e6b482762cc3b04239",
-                "reference": "9f28fda65c79f24225acf8e6b482762cc3b04239",
+                "url": "https://api.github.com/repos/KnpLabs/FriendlyContexts/zipball/4f96ecc42c700b21d0eb29a1e618b713da27a5f1",
+                "reference": "4f96ecc42c700b21d0eb29a1e618b713da27a5f1",
                 "shasum": ""
             },
             "require": {
@@ -1951,7 +2012,7 @@
                 }
             ],
             "description": "Some BEHAT contexts",
-            "time": "2014-07-29 13:29:30"
+            "time": "2014-07-30 16:57:48"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -3205,6 +3266,7 @@
         "knplabs/friendly-contexts": 20,
         "behat/behat": 20,
         "behat/mink-extension": 20,
+        "behat/symfony2-extension": 20,
         "h4cc/alice-fixtures-bundle": 20,
         "jms/serializer": 20,
         "willdurand/hateoas-bundle": 0
