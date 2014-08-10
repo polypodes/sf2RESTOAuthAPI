@@ -1,0 +1,7 @@
+\LesPolypodes\RestOAuthBundle\Entity\Author:
+  # 10 authors
+  author{1..10}:
+    firstname: <firstName()>
+    lastname: <lastName()>
+    createdAt: <dateTimeBetween('-5 years', '-3 years')>
+    updatedAt: <dateTimeBetween('-2 years', 'now')>

@@ -13,6 +13,7 @@ $set = new h4cc\AliceFixturesBundle\Fixtures\FixtureSet(array(
     'do_persist' => true,
 ));
 
+$set->addFile(__DIR__.'/authors.yml', 'yaml');
 $set->addFile(__DIR__.'/books.yml', 'yaml');
 
 return $set;

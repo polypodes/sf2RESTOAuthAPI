@@ -1,7 +1,8 @@
 \LesPolypodes\RestOAuthBundle\Entity\Book:
   # 10 books
-  user{1..10}:
+  book{1..30}:
     title: <sentence(3)>
     isbn: <randomNumber(8)>
+    author: @author*
     createdAt: <dateTimeBetween('-5 years', '-3 years')>
     updatedAt: <dateTimeBetween('-2 years', 'now')>
