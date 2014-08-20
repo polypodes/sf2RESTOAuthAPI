@@ -1,0 +1,6 @@
+<div>
+    {% for book in books %}
+        {{ include('LesPolypodesRestOAuthBundle:Api:book.html.twig', {'book': book}) }}
+        <hr />
+    {% endfor %}
+</div>

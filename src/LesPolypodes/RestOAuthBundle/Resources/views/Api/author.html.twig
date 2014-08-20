@@ -1,0 +1,16 @@
+<div itemprop="author" itemscope itemtype="http://schema.org/Person" itemid="#author">
+    <dl>
+        <dt>Full Name:</dt>
+        <dd itemprop="name" content="{{ author.fullname }}">
+            <a href="{{ path('author', {'id': author.id, '_format': 'html'}) }}">{{ author.fullname }}</a>
+        </dd>
+        <dt>Books:</dt>
+        <dl>
+            <ul>
+                {% for book in author.books %}
+                <li><a href="{{ path('book', {'id': book.id, '_format': 'html'} ) }}"">{{ book.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </dl>
+    </dl>
+</div>

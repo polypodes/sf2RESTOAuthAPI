@@ -2,7 +2,7 @@
   # 10 books
   book{1..30}:
     title: <sentence(3)>
-    isbn: <randomNumber(8)>
+    isbn: <randomNumber(6)><randomNumber(7)>
     author: @author*
     createdAt: <dateTimeBetween('-5 years', '-3 years')>
     updatedAt: <dateTimeBetween('-2 years', 'now')>

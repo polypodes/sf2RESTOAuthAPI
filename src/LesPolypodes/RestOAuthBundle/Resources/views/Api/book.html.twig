@@ -1,0 +1,15 @@
+<div itemscope= itemtype="http://schema.org/Book">
+    <dl>
+        <dt>Name:</dt>
+        <dd itemprop="name"><a href="{{ path('book', {'id': book.id, '_format': 'html'} ) }}">{{ book.title }}</a></dd>
+        <dt>ISBN-13:</dt>
+        <dd itemprop="isbn">{{ book.isbn }}</dd>
+        <dt>Author:</dt>
+        <dd itemprop="author" itemscope itemtype="http://schema.org/Person" itemid="#author">
+            <a itemprop="name" content="{{ book.author.fullname }}"
+               href="{{ path('author', {'id': book.author.id, '_format': 'html'}) }}">{{ book.author.fullname }}</a>
+        </dd>
+        <dt>Date of Addition:</dt>
+        <dd>{{ book.createdAt|date() }}</dd>
+    </dl>
+</div>

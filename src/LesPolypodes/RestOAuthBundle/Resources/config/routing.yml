@@ -1,6 +1,11 @@
 index:
     pattern:     /
-    defaults: { _controller: LesPolypodesRestOAuthBundle:Api:index }
+    defaults:
+        _controller: LesPolypodesRestOAuthBundle:Api:index
+        _format: json
+    requirements:
+        _method: GET
+        _format: html|json|xml
 
 books:
     pattern: /books.{_format}
@@ -15,6 +20,25 @@ book:
     pattern: /books/{id}.{_format}
     defaults:
         _controller: 'LesPolypodesRestOAuthBundle:Api:book'
+        _format: json
+    requirements:
+        _method: GET
+        _format: html|json|xml
+        id: \d+
+
+authors:
+    pattern: /authors.{_format}
+    defaults:
+        _controller: 'LesPolypodesRestOAuthBundle:Api:authors'
+        _format: json
+    requirements:
+        _method: GET
+        _format: html|json|xml
+
+author:
+    pattern: /authors/{id}.{_format}
+    defaults:
+        _controller: 'LesPolypodesRestOAuthBundle:Api:author'
         _format: json
     requirements:
         _method: GET

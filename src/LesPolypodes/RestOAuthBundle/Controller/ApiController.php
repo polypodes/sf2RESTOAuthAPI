@@ -12,7 +12,12 @@ class ApiController extends BaseController
      */
     public function indexAction()
     {
-        return ['index' => array('books'=> '/books')];
+        return [
+            'index' => array(
+                'books'=> '/books',
+                'authors'=> '/authors'
+            )
+        ];
     }
 
     /**
@@ -30,7 +35,7 @@ class ApiController extends BaseController
     }
 
     /**
-     * BookAction
+     * bookAction
      *
      * @param int id
      *
@@ -43,6 +48,36 @@ class ApiController extends BaseController
             ->getManager()
             ->getRepository('LesPolypodesRestOAuthBundle:Book')
             ->find($id)];
+    }
+
+    /**
+     * authorsAction
+     *
+     * @return Array data
+     */
+    public function authorsAction()
+    {
+        return ['authors' => $authors = $this
+                ->getDoctrine()
+                ->getManager()
+                ->getRepository('LesPolypodesRestOAuthBundle:Author')
+                ->findAll()];
+    }
+
+    /**
+     * authorAction
+     *
+     * @param int id
+     *
+     * @return Array data
+     */
+    public function authorAction($id)
+    {
+        return ['author' => $this
+                ->getDoctrine()
+                ->getManager()
+                ->getRepository('LesPolypodesRestOAuthBundle:Author')
+                ->find($id)];
     }
 
 

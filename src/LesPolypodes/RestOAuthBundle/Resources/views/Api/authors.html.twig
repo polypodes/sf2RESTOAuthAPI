@@ -1,0 +1,6 @@
+<div>
+    {% for author in authors %}
+        {{ include('LesPolypodesRestOAuthBundle:Api:author.html.twig', {'author': author}) }}
+        <hr />
+    {% endfor %}
+</div>

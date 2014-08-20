@@ -147,6 +147,16 @@ class Author
     }
 
     /**
+     * Get fullname
+     *
+     * @return string
+     */
+    public function getFullname()
+    {
+        return sprintf("%s %s", $this->firstname, $this->lastname);
+    }
+
+    /**
      * Add books
      *
      * @param  \LesPolypodes\RestOAuthBundle\Entity\Book $book
